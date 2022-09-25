@@ -16,5 +16,7 @@ rm -fr feeds/luci/applications/luci-app-smartdns
 svn checkout https://github.com/openwrt/luci/trunk/applications/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 svn checkout https://github.com/openwrt/packages/trunk/net/smartdns feeds/packages/net/smartdns
 svn checkout https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall feeds/luci/applications/luci-app-passwall
-#svn checkout https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 feeds/luci/applications/luci-app-passwall2
+pushd feeds/packages/lang
+rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang
+popd
 exit 0
